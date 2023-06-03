@@ -3,12 +3,14 @@
 
 #include "../BMP Programs/bmp.h"
 
-extern float sp_re[MaxBMPSizeX][MaxBMPSizeY]; // real part of the spectrum
-extern float sp_im[MaxBMPSizeX][MaxBMPSizeY]; // imaginary part of the spectrum
-extern float tmp[MaxBMPSizeX][MaxBMPSizeY];
+extern double sp_re[MaxBMPSizeX][MaxBMPSizeY]; // real part of the spectrum
+extern double sp_im[MaxBMPSizeX][MaxBMPSizeY]; // imaginary part of the spectrum
+extern double tmp[MaxBMPSizeX][MaxBMPSizeY];
 
-void fft1(float data[], int nn, int isign);
-void fft2(float data[], int nn, int isign);
-void spectrum_shift(int mm); // mm is one half of the original image width
+void Removal_of_Periodic_Noise(int(&R)[MaxBMPSizeX][MaxBMPSizeY], int(&r)[MaxBMPSizeX][MaxBMPSizeY], int w, int h);
+
+static void fft1(double data[], int nn, int isign);
+static void fft2(double data[], int nn, int isign);
+static void spectrum_shift(int mm); // mm is one half of the original image width
 
 #endif /* FFT */

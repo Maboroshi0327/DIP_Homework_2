@@ -1,6 +1,6 @@
 #include "Skin_Detection.h"
 
-void skin_detection(int(&R)[MaxBMPSizeX][MaxBMPSizeY], int(&G)[MaxBMPSizeX][MaxBMPSizeY], int(&B)[MaxBMPSizeX][MaxBMPSizeY],
+void Skin_Detection(int(&R)[MaxBMPSizeX][MaxBMPSizeY], int(&G)[MaxBMPSizeX][MaxBMPSizeY], int(&B)[MaxBMPSizeX][MaxBMPSizeY],
     int(&r)[MaxBMPSizeX][MaxBMPSizeY], int(&g)[MaxBMPSizeX][MaxBMPSizeY], int(&b)[MaxBMPSizeX][MaxBMPSizeY], int w, int h)
 {
     vector<vector<double>> H(w, vector<double>(h, 0));

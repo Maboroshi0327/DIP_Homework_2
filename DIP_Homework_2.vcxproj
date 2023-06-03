@@ -129,9 +129,7 @@
   <ItemGroup>
     <ClCompile Include="BMP Programs\bmp.cpp" />
     <ClCompile Include="DIP_Homework_2.cpp" />
-    <ClCompile Include="FFT Programs\FFT1.cpp" />
-    <ClCompile Include="FFT Programs\FFT2.cpp" />
-    <ClCompile Include="FFT Programs\SpectrumShift.cpp" />
+    <ClCompile Include="FFT Programs\FFT.cpp" />
     <ClCompile Include="RGB HSV\RGB_HSV.cpp" />
     <ClCompile Include="Skin Detection\Skin_Detection.cpp" />
   </ItemGroup>
