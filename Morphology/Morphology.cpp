@@ -16,7 +16,6 @@ void Noise_Removal(int(&R)[MaxBMPSizeX][MaxBMPSizeY], int(&r)[MaxBMPSizeX][MaxBM
     );
 
     vector<vector<int>> result(w, vector<int>(h, 0));
-    vector<vector<int>> result2(w, vector<int>(h, 0));
     Erosion(origin, result);
     Dilation(result, origin);
     Dilation(origin, result);
