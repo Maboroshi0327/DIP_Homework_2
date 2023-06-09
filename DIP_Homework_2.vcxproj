@@ -130,12 +130,14 @@
     <ClCompile Include="BMP Programs\bmp.cpp" />
     <ClCompile Include="DIP_Homework_2.cpp" />
     <ClCompile Include="FFT Programs\FFT.cpp" />
+    <ClCompile Include="Morphology\Morphology.cpp" />
     <ClCompile Include="RGB HSV\RGB_HSV.cpp" />
     <ClCompile Include="Skin Detection\Skin_Detection.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BMP Programs\bmp.h" />
     <ClInclude Include="FFT Programs\FFT.h" />
+    <ClInclude Include="Morphology\Morphology.h" />
     <ClInclude Include="RGB HSV\RGB_HSV.h" />
     <ClInclude Include="Skin Detection\Skin_Detection.h" />
   </ItemGroup>

@@ -4,8 +4,10 @@
 #include "BMP Programs/bmp.h"
 #include "Skin Detection/Skin_Detection.h"
 #include "FFT Programs/FFT.h"
+#include "Morphology/Morphology.h"
 
-using namespace std;
+using std::cout;
+using std::endl;
 
 int R[MaxBMPSizeX][MaxBMPSizeY];
 int G[MaxBMPSizeX][MaxBMPSizeY];
@@ -37,6 +39,16 @@ int main()
     cout << "Problem 2 Job Finished!" << endl;
     close_bmp();
 #pragma endregion Problem 2
+
+#pragma region Problem 3
+    open_bmp((char*)"test images/noisy_rectangle.bmp", R, R, R, width, height);
+
+    Noise_Removal(R, r, width, height);
+
+    save_bmp((char*)"test images\\Problem_3.bmp", r, r, r);
+    cout << "Problem 3 Job Finished!" << endl;
+    close_bmp();
+#pragma endregion Problem 3
 
     system("PAUSE");
     return 0;

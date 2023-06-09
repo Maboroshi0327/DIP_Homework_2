@@ -5,7 +5,7 @@
 #include <algorithm>
 #include "../BMP Programs/bmp.h"
 
-using namespace std;
+using std::vector;
 
 void rgb_to_hsv(int(&R)[MaxBMPSizeX][MaxBMPSizeY], int(&G)[MaxBMPSizeX][MaxBMPSizeY], int(&B)[MaxBMPSizeX][MaxBMPSizeY],
     vector<vector<double>>& H, vector<vector<double>>& S, vector<vector<double>>& V);

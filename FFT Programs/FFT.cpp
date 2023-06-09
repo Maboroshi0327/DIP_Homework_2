@@ -1,12 +1,4 @@
-#include <cmath>
-#include <cstdio>
-#include <vector>
-#include <algorithm>
 #include "FFT.h"
-
-#define SWAP(a,b)  tempr=(a); (a) = (b); (b) = tempr
-
-using namespace std;
 
 void Removal_of_Periodic_Noise(int(&R)[MaxBMPSizeX][MaxBMPSizeY], int(&r)[MaxBMPSizeX][MaxBMPSizeY], int w, int h)
 {
@@ -89,6 +81,13 @@ void Removal_of_Periodic_Noise(int(&R)[MaxBMPSizeX][MaxBMPSizeY], int(&r)[MaxBMP
     }
 
     delete data;
+}
+
+static inline void SWAP(double& a, double& b)
+{
+    double tempr = a;
+    a = b;
+    b = tempr;
 }
 
 /** 1-D fft program
