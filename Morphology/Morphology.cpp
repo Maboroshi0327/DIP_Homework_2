@@ -3,17 +3,13 @@
 void Noise_Removal(int(&R)[MaxBMPSizeX][MaxBMPSizeY], int(&r)[MaxBMPSizeX][MaxBMPSizeY], int w, int h)
 {
     vector<vector<int>> origin(w, vector<int>(h, 0));
-    for_each(origin.begin(), origin.end(), [&](vector<int>& i)
+    for (int i = 0; i < w; i++)
+    {
+        for (int j = 0; j < h; j++)
         {
-            int index_i = (int)(&i - &origin[0]);
-            for_each(i.begin(), i.end(), [&](int& j)
-                {
-                    int index_j = (int)(&j - &i[0]);
-                    j = R[index_i][index_j];
-                }
-            );
+            origin[i][j] = R[i][j];
         }
-    );
+    }
 
     vector<vector<int>> result(w, vector<int>(h, 0));
     Erosion(origin, result);

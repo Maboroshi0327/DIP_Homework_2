@@ -6,7 +6,6 @@
 #include "../BMP Programs/bmp.h"
 
 using std::vector;
-using std::for_each;
 
 void Noise_Removal(int(&R)[MaxBMPSizeX][MaxBMPSizeY], int(&r)[MaxBMPSizeX][MaxBMPSizeY], int w, int h);
 
