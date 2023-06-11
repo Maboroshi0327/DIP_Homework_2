@@ -18,6 +18,12 @@ void Skin_Detection(int(&R)[MaxBMPSizeX][MaxBMPSizeY], int(&G)[MaxBMPSizeX][MaxB
                 g[i][j] = 255;
                 b[i][j] = 255;
             }
+            else
+            {
+                r[i][j] = 0;
+                g[i][j] = 0;
+                b[i][j] = 0;
+            }
         }
     }
 }
