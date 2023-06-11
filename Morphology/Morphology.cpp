@@ -28,8 +28,8 @@ void Noise_Removal(int(&R)[MaxBMPSizeX][MaxBMPSizeY], int(&r)[MaxBMPSizeX][MaxBM
 
 static void Erosion(vector<vector<int>>& origin, vector<vector<int>>& result)
 {
-    int w = origin.size();
-    int h = origin[0].size();
+    int w = (int)origin.size();
+    int h = (int)origin[0].size();
     int size = 23;
 
     vector<vector<int>> structure(size, vector<int>(size, 255));
@@ -49,8 +49,8 @@ static void Erosion(vector<vector<int>>& origin, vector<vector<int>>& result)
 
 static void Dilation(vector<vector<int>>& origin, vector<vector<int>>& result)
 {
-    int w = origin.size();
-    int h = origin[0].size();
+    int w = (int)origin.size();
+    int h = (int)origin[0].size();
     int size = 23;
 
     vector<vector<int>> structure(size, vector<int>(size, 255));
@@ -70,8 +70,8 @@ static void Dilation(vector<vector<int>>& origin, vector<vector<int>>& result)
 
 static void find_match(vector<vector<int>>& origin, vector<vector<int>>& result, vector<vector<int>>& structure, int x, int y)
 {
-    int w = structure.size();
-    int h = structure[0].size();
+    int w = (int)structure.size();
+    int h = (int)structure[0].size();
 
     bool flag = true;
     for (int i = 0; i < w and flag == true; i++)
@@ -92,10 +92,10 @@ static void find_match(vector<vector<int>>& origin, vector<vector<int>>& result,
 
 static void filling(vector<vector<int>>& origin, vector<vector<int>>& result, vector<vector<int>>& structure, int x, int y)
 {
-    int w_o = origin.size();
-    int h_o = origin[0].size();
-    int w_s = structure.size();
-    int h_s = structure[0].size();
+    int w_o = (int)origin.size();
+    int h_o = (int)origin[0].size();
+    int w_s = (int)structure.size();
+    int h_s = (int)structure[0].size();
 
     if (origin[x][y] == 255)
     {
