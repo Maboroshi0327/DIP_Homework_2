@@ -80,7 +80,7 @@ void Removal_of_Periodic_Noise(int(&R)[MaxBMPSizeX][MaxBMPSizeY], int(&r)[MaxBMP
         }
     }
 
-    delete data;
+    delete[] data;
 }
 
 static inline void SWAP(double& a, double& b)
