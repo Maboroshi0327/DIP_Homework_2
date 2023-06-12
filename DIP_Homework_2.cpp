@@ -1,5 +1,4 @@
 ﻿#include <iostream>
-#include <vector>
 #include <cstdlib>
 #include "BMP Programs/bmp.h"
 #include "Skin Detection/Skin_Detection.h"
